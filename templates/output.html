@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset='utf8'>
+	<meta http-equiv='X-UA-Compatible' contents='IE=edge'>
+	<title>Registered Users</title>
+		
+</head>
+<body>
+<h1> Registered User's Details</h1>
+<table border='1' width='600'>
+<tr>
+<td>UserName</td>
+<td>Email ID</td>
+<td>Age</td>
+<td>City Name</td>
+<td>Referral Code</td>
+
+<tr>
+{% for t in table %}
+<td>{{t.username}}</td>
+<td>{{t.email}}</td>
+<td>{{t.age}}</td>
+<td>{{t.city}}</td>
+<td>{{t.referralcode}}</td>
+</tr>
+{%endfor%}
+
+</table>
+</body>
+</html>

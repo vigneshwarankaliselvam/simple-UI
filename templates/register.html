@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset='utf8'>
+	<meta http-equiv='X-UA-Compatible' contents='IE=edge'>
+	<title>Registeration</title>
+	<h1> <div align='center'> Registration</h1></div>
+	
+	
+	
+</head>
+<body>
+<div align = 'center'>
+	<form action='register' method='post'>
+	{% csrf_token %}
+	Enter the Username      : <input type='text'   name='username'     placeholder='username'><br>
+	Enter the Email ID      : <input type='email'  name='email'        placeholder='email'><br>
+	Enter Your Age          : <input type='number' name='age'          placeholder='age'><br>
+	Enter Your City         : <input type='text'   name='city'         placeholder='city'><br>
+	Enter the Referral_code : <input type='text'   name='referralcode' placeholder='referralcode'><br>
+	
+	<input type="submit" value='Register'/ >
+	
+        
+        {%for message in messages%}
+	<h1>{{message}}</h1>
+	
+        {% endfor%}
+</div>
+	</form>
+
+</body>
+</head>
+</html>
